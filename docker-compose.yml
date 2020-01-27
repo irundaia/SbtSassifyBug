@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  scala:
+    build: .
+    volumes:
+        - .:/bug
+    command: "sh -c \"cp -r /bug/ /workingDir && cd workingDir && sbt assets\""
